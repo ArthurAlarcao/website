@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<title> CEN 3031 Intro to Software Engineering </title>	
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+	<script src = "form3.js">  </script>
+	
+</head>
+<body>
+
+
+	<!-- TOP BAR / NAV BAR -->
+	<nav class="navbar navbar-light navbar-expand-lg">
+		<div class="container">
+			
+			<a href="ufpic" class="navbar-brand" style= "padding-left: 0;"><img src="uf.jpg"></a>
+
+			<div class="classtitle">
+				<ul class="top mr-auto">CEN 3031</ul>
+				<ul class="bottom mr-auto">Intro to Software Engineering</ul>
+			</div>
+
+			<div class="list">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a href="homepage.html" class="nav-link active">Home</a></li>
+					<li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+					<li class="nav-item"><a href="login.html" class="nav-link">Login/Register</a></li>
+				</ul>
+			</div>
+
+		</div>
+	
+	</nav>
+
+
+	<!-- Semester Showcase Title -->
+	<div class= "showcasetitle container">
+
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="showcasetext">Spring 2021 Showcase</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<script>
+		
+		database = firebase.database();
+		
+		var ref = database.ref('Pictures');
+		ref.on('value', gotData);
+
+		function gotData(data){
+
+			console.log(data.val());
+			var sr = data.val();
+			var keys = Object.keys(sr);
+			console.log(keys);
+
+			for(var i=0; i<keys.length; i++){
+
+				var k = keys[i];
+				var title = sr[k].Title;
+				var link = sr[k].Link;
+				var desc = sr[k].Description;
+				console.log(title,link,desc);
+
+				var t = document.createElement('input');
+				t.value = title;
+				t.className = "postTitle";
+
+				var l = document.createElement("img");
+				l.src = link;
+				l.className = "postPicture";	
+
+				var d = document.createElement('textarea');
+				d.value = desc;
+				d.className = "postDescription";			
+				
+				var post = document.createElement('a');
+				post.appendChild(t);
+				post.appendChild(l);
+				post.appendChild(d);
+				document.getElementById('posts').appendChild(post);
+			}
+		}
+
+			 
+	</script>
+	<!-- Semester selection box -->
+	<div class ="float-container">
+
+		<div class="float-child">
+		</div>
+
+		<div class="float-child2">
+			<a id = "posts" class="post">
+			
+				
+			</a>
+		</div>
+
+		<div class="float-child ">
+			<div class="contactinfo"> Contact Information:
+				<pre class= "contacts">Name: 		 Email: </ul>
+				<pre class= "names">Dr. Sanethia Thomas  sanethiat@ufl.edu </ul>
+				<pre class= "names">Grey Johnson         grey.johnson@ufl.edu </ul>
+				<pre class= "names">Dahlia La Pommeray   d.lapommeray@ufl.edu </ul>
+				<pre class= "names">Paulina Liwinag      paulina.liwanag@ufl.edu </ul>
+				<pre class= "names">Tyler Metzger        tylermetzger@ufl.edu </ul>
+				<pre class= "names">Fernando Rivera      f.rivera@ufl.edu </ul>
+				<pre class= "names">Paola Solari         paola.solari@ufl.edu </ul>
+				<pre class= "names">Alex Webber          alexwebber@ufl.edu </ul>
+				<pre class= "names">Jack Zheng           jackzheng@ufl.edu </ul>
+			</div>	
+				
+		</div>
+		
+
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" 
+	integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+	integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+	<script src="js/boostrap.js"></script>
+
+</body>
+</html>

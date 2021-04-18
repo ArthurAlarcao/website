@@ -1,0 +1,153 @@
+textarea[name = postDescription]{
+	pointer-events: none;
+	overflow: hidden;
+	resize: none;
+	width: fixed;
+	columns: 100;
+	rows: 9;
+}
+/* ==== UF img in top navbar ==== */
+.navbar-brand img {
+	height: 5rem;
+}
+
+
+/* ==== UF img in top navbar ==== */
+.navbar {
+	background-color:#F58E46;
+	height: 6rem;
+	box-shadow: 0 .5rem .5rem #04539b;
+
+}
+
+
+/* ==== Navigation links to home, dashboard, login ==== */
+.nav-item {
+	padding: .5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	color: black!important
+	
+}
+
+
+/* ==== Navigation active/hover ==== */
+.nav-link.active, 
+.nav-link:hover {
+	color: #04539b!important;
+}
+
+
+/* ==== class title font ==== */
+.classtitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-left: -450;
+
+}
+
+.bottom {
+	margin-top: -25;
+}
+
+.bottom2 {
+	margin-top: -25;
+}
+
+.showcasetitle {
+	height: 75;
+	margin-top: 50;
+
+}
+
+.showcasetext{
+	font-weight: 500;
+	font-size: 3rem;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	text-decoration: underline;
+	color: #04539b;
+	text-decoration-color: #F58E46;
+	
+}
+
+.float-container {
+	padding: 20px;
+	height: 400;
+	
+
+}
+
+.float-child {
+	width: 25%;
+	float: left;
+	padding: 10px;
+	text-align: left;
+	height: 200;
+	font-weight: 500;
+	font-size: 1.25rem;
+}
+
+.float-child2 {
+	width: 50%;
+	float: left;
+	padding: 20px;
+	text-align: center;
+	height: auto;
+}
+
+.contactinfo {
+	height: 400;
+	padding: 0.25rem;
+	border: 4px solid;
+	margin-left: -25;
+	border-radius: 25px;
+	border-color: #04539b;
+	background-color: #F58E46;
+	
+}
+
+
+.contacts {
+	font-size: 1rem!important;
+	text-align: 10 left!important;
+	font-weight: 600;
+
+}
+
+.names {
+	font-size: .9rem!important;
+	text-align: left!important;
+	margin-top: -20;
+}
+.postTItle{
+	pointer-events: none;
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+	border: 0px;
+	margin-top: 20px;
+	width: 600px;
+
+}
+.postPicture{
+	height: auto;
+	width: 600px;
+	margin-top: 10px;
+	
+}
+.postDescription{
+	pointer-events: none;
+	resize: none;
+	font-size: 1.1rem;
+	width: 600px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	height: 200px;
+	border: 0px;
+}
+
+.post{
+	border-bottom: 2px solid;
+}

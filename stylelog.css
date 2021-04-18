@@ -1,0 +1,43 @@
+.navbar {
+    background-color:#F58E46;
+	height: 6rem;
+	box-shadow: 0 .5rem .5rem #04539b;
+}
+
+.navbar-brand img {
+	height: 5rem;
+}
+
+/* ==== Navigation links to home, dashboard, login ==== */
+.nav-item {
+	padding: .5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	color: black!important
+	
+}
+
+
+/* ==== Navigation active/hover ==== */
+.nav-link.active, 
+.nav-link:hover {
+	color: #04539b!important;
+}
+
+
+/* ==== class title font ==== */
+.classtitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-left: -450px;
+
+}
+
+.bottom {
+	margin-top: -25px;
+}
+
+.bottom2 {
+	margin-top: -25px;
+}
