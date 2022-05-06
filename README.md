@@ -12,6 +12,8 @@ Primary done through github.
 clone the remote git repository to local
 open homepage.html
 direct access to the UI
+OR
+open https://arthuralarcao.github.io/website/homepage.html
 ```
 To edit
 ```
